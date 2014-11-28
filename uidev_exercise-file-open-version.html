@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="hCard Builder">
+    <meta name="keywords" content="hCard, hCard Builder, hCard Previewer">
+    <meta name="author" content="Zachary He">
+    <title>hCard Builder</title>
+    <!-- Bootstrap core CSS -->
+    
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather%3A400%3A700%7CMerriweather+Sans%3A400%2C700%2C800">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <!-- Documentation extras -->
+    <link rel="stylesheet" href="assets/css/screen.css" media="screen">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="container fix1000">
+        <div class="row">
+            <section class="col-md-6 main">
+            
+                <header>
+                    <h1>hCard Builder</h1>
+                </header>
+            
+                <form name="hCard" action="#" method="POST">
+                    <fieldset>
+                        <legend>Personal Details</legend>
+                        <div class="row row-margin-custom">
+                            <div class="col-md-6 form-group column-padding-custom">
+                                <label for="given_name">Given Name</label>
+                                <input type="text" class="form-control serif" id="given_name" name="given_name" title="Please Input Given Name" />
+                            </div>
+                            <div class="col-md-6 form-group column-padding-custom">
+                                <label for="surname">Surname</label>
+                                <input type="text" class="form-control serif" id="surname" name="surname" title="Please Input Surname" />
+                            </div>
+                        </div>
+                        <div class="row row-margin-custom">
+                            <div class="col-md-6 form-group column-padding-custom">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control serif" id="email" name="email" title="Please Input Email" />
+                            </div>
+                            <div class="col-md-6 form-group column-padding-custom">
+                                <label for="phone">Phone</label>
+                                <input type="tel" class="form-control serif" id="phone" name="phone" title="Please Input Phone" />
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Address</legend>
+                        <div class="row row-margin-custom">
+                            <div class="col-md-6 form-group column-padding-custom">
+                                <label for="house_name">House Name or #</label>
+                                <input type="text" class="form-control serif" id="house_name" name="house_name" title="Please Input House Name or #" />
+                            </div>
+                            <div class="col-md-6 form-group column-padding-custom">
+                                <label for="street">Street</label>
+                                <input type="text" class="form-control serif" id="street" name="street" title="Please Input Street" />
+                            </div>
+                        </div>
+                        <div class="row row-margin-custom">
+                            <div class="col-md-6 form-group column-padding-custom">
+                                <label for="suburb">Suburb</label>
+                                <input type="text" class="form-control serif" id="suburb" name="suburb" title="Please Input Suburb" />
+                            </div>
+                            <div class="col-md-6 form-group column-padding-custom">
+                                <label for="state">State</label>
+                                <select id="state" name="state" class="form-control serif">
+                                    <option value="">&nbsp;</option>
+                                    <option value="ACT">ACT</option>
+                                    <option value="NSW">NSW</option>
+                                    <option value="NT">NT</option>
+                                    <option value="Qld">Qld</option>
+                                    <option value="SA">SA</option>
+                                    <option value="Tas">Tas</option>
+                                    <option value="Vic">Vic</option>
+                                    <option value="WA">WA</option>
+                                </select>
+                                <input type="text" class="form-control serif hide" id="state_manually" name="state_manually" title="Please Input State" />
+                            </div>
+                        </div>
+                        <div class="row row-margin-custom">
+                            <div class="col-md-6 form-group column-padding-custom">
+                                <label for="postcode">Postcode</label>
+                                <input type="text" class="form-control serif" id="postcode" name="postcode" title="Please Input Postcode" />
+                            </div>
+                            <div class="col-md-6 form-group column-padding-custom">
+                                <label for="country">Country</label>
+                                <select id="country" name="country" class="form-control serif">
+                                    <option value="">&nbsp;</option>
+                                    <option value="AU">Ausrtalia</option>
+                                    <option value="US">USA</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <button type="submit" class="btn btn-primary btn-lg center-block custom-sbmit">Create hCard</button>
+                    </fieldset>
+                </form>
+            </section>
+            
+            <aside class="col-md-6 preview">
+                <div class="hCard">
+                    <h2>hCard Preview</h2>
+                    <dl class="content">
+                        <dt class="preview-name hide">Name</dt><dd class="serif"><h3 data-fields="{given_name} {surname}">&nbsp;</h3></dd>
+                        <dt>Email</dt><dd class="serif" data-fields="{email}"></dd>
+                        <dt>Phone</dt><dd class="serif" data-fields="{phone}"></dd>
+                        <dt>Address</dt><dd class="serif" data-fields="{house_name} {street}"></dd>
+                        <dt><span class="invisible">Address Line 2</span></dt><dd class="serif" data-fields="{suburb}, {state_manually}"></dd>
+                        <dt>Postcode</dt><dd class="half serif" data-fields="{postcode}"></dd>
+                        <dt>Country</dt><dd class="half serif" data-fields="{country}"></dd>
+                    </dl>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <script src="assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+
+        /* For dev matching pixel only, please remove this part during deploy */
+        /*
+        div.fix1000 { background: grey url(../../dev-docs/uidev_exercise_completedview.png) no-repeat top left; }
+        .preview {  opacity: .7; }
+        */
+        
+        /* Style Settings */
+        body { background-color: grey; font-family: 'Merriweather Sans', sans-serif; font-style: normal; font-weight: 400; }
+        .serif { font-family: 'Merriweather', Times, serif; }
+        div.fix1000 { background-color: white; }
+        .preview { background-color: #e1e4e7; }
+        
+        header h1 { font-weight: 800; font-size: 28px; color: #2c3e50; }
+        legend { font-weight: 700; font-size: 10px; line-height: 17px; color: #b0b8bc; text-transform: uppercase; border-bottom-color: #dbe0e2; }
+        label { font-size: 12px; color: #34495e; text-transform: uppercase;  }
+        
+        .custom-sbmit { padding: 6px 32px; font-size: 20px; font-weight: 400; background-color: #3498db; border-color: #3498db; border-bottom-color: #2980b9; }
+        .form-control { color: black; font-size: 16px; }
+        
+        /* Layout Settings */
+        div.fix1000 { width: 1000px; margin-top: 50px; }
+        .main { width: 480px; padding: 40px; }
+        .preview { width: 520px; padding: 45px; background-color: #e1e4e7; padding-top: 170px; padding-bottom: 159px; }
+        .form-group { margin-bottom: 14px; }
+        
+        .row-margin-custom { margin-right: -11px; margin-left: -11px; }
+        .row-margin-custom .column-padding-custom { padding-right: 11px; padding-left: 11px; }
+        
+        /* Main Area Styles */
+        .main header { height: 56px; }
+        .main header h1 { margin-top: -2px; }
+        .main form fieldset + fieldset { margin-top: 15px; }
+        .main form fieldset label { margin-bottom: 0; }
+        
+        /* hCard Area Style */
+        .hCard { position: relative; }
+        .hCard h2 { position: absolute; font-size: 16px; color: #95a5a6; font-weight: 400; text-transform: uppercase; right: 0; top: -34px; margin: 0; }
+        .hCard .content { background-color: white; padding-left: 25px; padding-right: 25px; padding-bottom: 26px; border-bottom: 2px solid #9a9a9a; }
+        .hCard .content:after { content:" "; display: block; height: 0; clear: both; float: none; }
+        .hCard .content dt, .hCard .content dt + dd { float: left; display: block; height: 32px; border-bottom: 1px solid #dbe0e2; padding-top: 11px; }
+        .hCard .content dt { width: 75px; text-transform: uppercase; font-size: 10px; line-height: 23px; color:#34495e; }
+        .hCard .content dd { width: 305px; font-size: 16px; line-height: 20px; overflow: hidden; }
+        .hCard .content dt.preview-name + dd {
+            background-color: #2c3e50; 
+            margin-left: -25px;  
+            margin-right: -25px; 
+            margin-bottom: 14px; 
+            border-bottom-style: none; 
+            padding: 22px 25px; 
+            line-height: 26px; 
+            height: 70px; 
+            display: block; 
+            float: none; 
+            clear: both; 
+            width: auto;
+        }
+        .hCard .content dt.preview-name + dd h3{
+            overflow: hidden;
+            margin: 0;
+            height: 26px; 
+            line-height: 26px; 
+            width: 100%;
+            color: white; 
+            font-size: 24px; 
+            font-weight: 700; 
+        }
+        .hCard .content dd.half { width: 115px; }
