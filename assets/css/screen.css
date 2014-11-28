@@ -1,10 +1,4 @@
 
-        /* For dev matching pixel only, please remove this part during deploy */
-        /*
-        div.fix1000 { background: grey url(../../dev-docs/uidev_exercise_completedview.png) no-repeat top left; }
-        .preview {  opacity: .7; }
-        */
-        
         /* Style Settings */
         body { background-color: grey; font-family: 'Merriweather Sans', sans-serif; font-style: normal; font-weight: 400; }
         .serif { font-family: 'Merriweather', Times, serif; }
