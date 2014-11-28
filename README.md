@@ -39,4 +39,6 @@ Memo
 Important
 ------------
 
+Please check `dev-docs` directory for psd and mockups.
+
 To check if it is pixel match, please enable css in `/assets/css/screen.css` line 3 to line 6.
