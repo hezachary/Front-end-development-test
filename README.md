@@ -35,3 +35,8 @@ Memo
 **For web host environment: ** please view `uidev_exercise.html`
 
 **For file system: ** please view `uidev_exercise-file-open-version.html`
+
+Important
+------------
+
+To check if it is pixel match, please enable css in `/assets/css/screen.css` line 3 to line 6.
